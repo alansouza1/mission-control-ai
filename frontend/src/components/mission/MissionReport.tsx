@@ -38,9 +38,9 @@ export function MissionReport({ timelineData, overview }: MissionReportProps) {
 
       const last = cycles[total - 1];
       if (last.riskScore < 25) {
-        narrative += `A telemetria mais recente do ciclo #${last.index} confirma que as medidas de contingência restabeleceram as condições ótimas operacionais (Risco SERS atual em ${last.riskScore}%). O sistema encontra-se em regime térmico de segurança.`;
+        narrative += `A telemetria mais recente do ciclo #${last.index} confirma que as medidas de contingência restabeleceram as condições ótimas operacionais (Risco atual em ${last.riskScore}%). O sistema encontra-se em regime térmico de segurança.`;
       } else if (last.riskScore >= 45) {
-        narrative += `O ciclo final #${last.index} indica uma persistência de anomalia ativa sob risco crítico de ${last.riskScore}%. É urgente a intervenção técnica ou reorientação das cargas de potência do sistema SERS.`;
+        narrative += `O ciclo final #${last.index} indica uma persistência de anomalia ativa sob risco crítico de ${last.riskScore}%. É urgente a intervenção técnica ou reorientação das cargas de potência do sistema.`;
       } else {
         narrative += `As variáveis atuais mantêm-se em patamar de monitoramento intensivo, aguardando acomodação das reservas de oxigênio de cabine (${last.oxygen}%).`;
       }
@@ -149,7 +149,7 @@ export function MissionReport({ timelineData, overview }: MissionReportProps) {
             II. DADOS ARITMÉTICOS DE TELEMETRIA E RENDIMENTO
           </h4>
 
-          {/* SERS / Telemetries statistics Table */}
+          {/* Telemetries statistics Table */}
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse border border-slate-800 text-[10px]">
               <thead>
@@ -160,7 +160,7 @@ export function MissionReport({ timelineData, overview }: MissionReportProps) {
                   <th className="p-2 border border-slate-850 text-right">BATT (%)</th>
                   <th className="p-2 border border-slate-850 text-right">ESTAB (%)</th>
                   <th className="p-2 border border-slate-850 text-right">RISCO (%)</th>
-                  <th className="p-2 border border-slate-850 text-right">SERS (W)</th>
+                  <th className="p-2 border border-slate-850 text-right">POTÊNCIA (W)</th>
                 </tr>
               </thead>
               <tbody>

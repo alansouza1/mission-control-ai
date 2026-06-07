@@ -44,7 +44,7 @@ export function RiskAnalysis({ timelineData, averageRisk }: RiskAnalysisProps) {
       list.push({
         id: 'batt',
         title: 'Gerenciamento de Carga de Bateria',
-        desc: `Reserva energética reduzida (${latest.battery}%). Recomenda-se acionar protocolos de gerenciamento de carga ativa SERS e priorização de sensores principais.`,
+        desc: `Reserva energética reduzida (${latest.battery}%). Recomenda-se acionar protocolos de gerenciamento de carga ativa e priorização de sensores principais.`,
         severity: 'critical',
       });
     }

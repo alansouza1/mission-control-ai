@@ -43,7 +43,7 @@ export function analyzeCycle(current: RawCycle, index: number, previous?: RawCyc
   // Average risk score across the 5 dimensions
   const riskScore = Math.round(((tempRisk + commRisk + battRisk + oxyRisk + stabRisk) / 5) * 10) / 10;
 
-  // Renewable Energy Panel (SERS) engineering calculations:
+  // Renewable Energy Panel engineering calculations:
   // 1. Stored Energy (Wh) assuming a 2000 Wh battery capacity
   const storedEnergyWh = Math.round(2000 * (batt / 100));
 
@@ -53,7 +53,7 @@ export function analyzeCycle(current: RawCycle, index: number, previous?: RawCyc
   // 3. Current (A) assuming a 28V spacecraft power bus
   const currentA = Math.round((generatedPowerW / 28) * 100) / 100;
 
-  // 4. Operational Sustainability Status (SERS)
+  // 4. Operational Sustainability Status
   let sustainabilityStatus = 'Recuperação Emergencial';
   if (batt >= 75 && generatedPowerW >= 375) {
     sustainabilityStatus = 'Sustentabilidade Forte';

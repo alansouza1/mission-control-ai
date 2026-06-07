@@ -52,7 +52,7 @@ export function RenewablePanel({ activeCycle }: RenewablePanelProps) {
             <Sun className="w-5 h-5 text-amber-400" />
           </div>
           <div>
-            <h3 className="text-base font-semibold tracking-tight text-white">SERS - Painel de Energia Renovável</h3>
+            <h3 className="text-base font-semibold tracking-tight text-white">Painel de Energia Renovável</h3>
             <p className="text-xs text-slate-400 font-mono">Subsistema Solar e Armazenamento por Baterias de Íon-Lítio.</p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export function RenewablePanel({ activeCycle }: RenewablePanelProps) {
       </div>
 
       <div className="text-[11px] text-slate-400 mb-6 leading-relaxed bg-slate-900/40 border border-slate-850 p-3 rounded-lg font-mono">
-        <p className="font-bold text-white mb-1">Sistema de Cálculo SERS:</p>
+        <p className="font-bold text-white mb-1">Sistema de Cálculo:</p>
         <p>• Potência Gerada = Potência Máxima × Eficiência (com Potência Máxima = 500 W e Eficiência = Nível da Bateria / 100)</p>
         <p>• Energia Armazenada = Capacidade × (Nível da Bateria / 100) (com Capacidade = 2000 Wh)</p>
         <p>• Corrente Estimada = Potência Gerada / Tensão Nominal (com Tensão Nominal = 28 V)</p>
@@ -121,7 +121,7 @@ export function RenewablePanel({ activeCycle }: RenewablePanelProps) {
       </div>
 
       <p className="text-[11px] text-slate-500 font-mono mt-4 text-right">
-        Status SERS correspondente: <strong>{badgeConfig.description}</strong>
+        Status correspondente: <strong>{badgeConfig.description}</strong>
       </p>
     </div>
   );

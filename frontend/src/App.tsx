@@ -36,7 +36,7 @@ export default function App() {
     return calculateMissionOverview(cycles);
   }, [cycles]);
 
-  // Extract active cycle data to render SERS and KPI panels
+  // Extract active cycle data to render KPI panels
   const activeCycle = useMemo(() => {
     // Falls back to latest cycle if selectedIndex goes out of bounds
     const found = analyzedCycles.find((c) => c.index === selectedCycleIndex);
@@ -88,7 +88,7 @@ export default function App() {
           <div>
             <h2 className="text-sm font-bold text-white uppercase tracking-wider font-mono">Console de Monitoramento Integrado</h2>
             <p className="text-xs text-slate-300 leading-relaxed mt-1">
-              Esta plataforma representa o monitoramento analítico do sistema <strong>{MISSION_NAME}</strong> operado pela equipe <strong>{MISSION_TEAM}</strong>. Os dados iniciais refletem exatamente o processamento de análise de risco e os algoritmos de comportamento operacional implementados no protótipo em Python do projeto Mission Control AI. Utilize o simulador inferior para injetar parâmetros operacionais simulados e analisar o comportamento elétrico SERS em tempo real.
+              Esta plataforma representa o monitoramento analítico do sistema <strong>{MISSION_NAME}</strong> operado pela equipe <strong>{MISSION_TEAM}</strong>. Os dados iniciais refletem exatamente o processamento de análise de risco e os algoritmos de comportamento operacional implementados no protótipo em Python do projeto Mission Control AI. Utilize o simulador inferior para injetar parâmetros operacionais simulados e analisar o comportamento elétrico em tempo real.
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function App() {
 
         {/* 4. Power & Simulator Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6" id="subsystem-modules-grid">
-          {/* Renewable SERS Panel */}
+          {/* Renewable Panel */}
           <RenewablePanel activeCycle={activeCycle} />
 
           {/* New Cycle Telemetry Injector Link */}

@@ -181,7 +181,7 @@ export function TelemetrySimulator({ onAddCycle, nextIndex }: TelemetrySimulator
           {/* Battery Slider */}
           <div className="p-3.5 bg-slate-900/40 border border-slate-850 rounded-lg">
             <div className="flex items-center justify-between text-xs font-mono mb-1">
-              <span className="text-slate-400">Bateria (SERS)</span>
+              <span className="text-slate-400">Bateria</span>
               <span className="font-bold text-white">{batt} %</span>
             </div>
             <input
