@@ -1,0 +1,6 @@
+{
+  "name": "Mission Control AI",
+  "description": "Painel de monitoramento de engenharia para o projeto acadêmico Mission Control AI (Orion Sentinel, Equipe Horizon).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

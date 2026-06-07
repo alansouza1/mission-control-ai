@@ -1,61 +1,51 @@
-/** Severity levels for individual area readings. */
-export type RiskLevel = 'normal' | 'warning' | 'critical';
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
-/** Overall mission classification based on aggregate risk score. */
-export type MissionClassification = 'stable' | 'warning' | 'critical';
+/**
+ * Represent a single raw telemetry cycle:
+ * [temperature, communication, battery, oxygen, stability]
+ */
+export type RawCycle = [number, number, number, number, number];
 
-/** The five monitored subsystems of the spacecraft. */
-export type MonitoredArea =
-  | 'temperature'
-  | 'communication'
-  | 'battery'
-  | 'oxygen'
-  | 'stability';
+export interface ComponentTelemetry {
+  name: string;
+  value: number;
+  unit: string;
+  status: 'Normal' | 'Atenção' | 'Crítico';
+  risk: number;
+  trend: 'up' | 'down' | 'stable';
+}
 
-/** Raw sensor readings for a single monitoring cycle. */
-export interface CycleReading {
+export interface CycleAnalysis {
+  index: number;
   temperature: number;
   communication: number;
   battery: number;
   oxygen: number;
   stability: number;
+  riskScore: number;
+  // Energy metrics
+  storedEnergyWh: number;
+  generatedPowerW: number;
+  currentA: number;
+  sustainabilityStatus: string;
 }
 
-/** Analysis result for a single monitored area within a cycle. */
-export interface AreaAnalysis {
-  points: number;
-  level: RiskLevel;
-  description: string;
-}
-
-/** Complete analysis output for a single monitoring cycle. */
-export interface CycleAnalysis {
-  cycleNumber: number;
-  readings: CycleReading;
-  areas: Record<MonitoredArea, AreaAnalysis>;
-  totalRisk: number;
-  classification: MissionClassification;
-  recommendation: string;
-}
-
-/** Summary statistics aggregated across all mission cycles. */
-export interface MissionSummary {
-  name: string;
-  team: string;
-  totalCycles: number;
-  averages: Record<MonitoredArea, number>;
-  mostCriticalCycle: { cycleNumber: number; risk: number };
+export interface MissionOverviewMetrics {
+  status: 'Operação Estável' | 'Monitoramento Intensivo' | 'Alerta Crítico';
+  trend: 'Melhora Contínua' | 'Estabilidade Crítica' | 'Declínio Sistêmico' | 'Estabilização';
   averageRisk: number;
-  criticalCyclesCount: number;
-  trend: string;
-  accumulatedScores: { area: MonitoredArea; points: number }[];
-  mostAffectedAreas: MonitoredArea[];
-  finalClassification: MissionClassification;
+  mostCriticalCycleIndex: number;
+  mostCriticalCycleRisk: number;
+  totalCycles: number;
 }
 
-/** Display metadata for a monitored area (labels, units, icons). */
-export interface AreaMetadata {
-  key: MonitoredArea;
-  label: string;
-  unit: string;
+export interface EnergyAverages {
+  currentBattery: number;
+  storedEnergyWh: number;
+  generatedPowerW: number;
+  currentA: number;
+  sustainabilityStatus: string;
 }
