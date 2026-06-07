@@ -18,7 +18,7 @@ export function Footer() {
 
         <div className="flex items-center gap-1">
           <Cpu className="w-3.5 h-3.5 text-slate-500" />
-          <span>Projeto de Engenharia – Equipe Horizon</span>
+          <span>Equipe Horizon</span>
         </div>
 
         <div>

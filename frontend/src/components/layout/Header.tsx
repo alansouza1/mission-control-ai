@@ -59,7 +59,7 @@ export function Header({ missionName, teamName, overview }: HeaderProps) {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase">PROJETO ACADÊMICO HORIZON</span>
+              <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase">EQUIPE HORIZON</span>
               <span className="text-[10px] py-0.5 px-2 bg-slate-800 border border-slate-700 text-slate-300 rounded font-mono">
                 TELEMETRIA ATIVA
               </span>

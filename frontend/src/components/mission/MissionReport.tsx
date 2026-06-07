@@ -20,7 +20,7 @@ export function MissionReport({ timelineData, overview }: MissionReportProps) {
     const total = cycles.length;
     if (total === 0) return 'Nenhum registro de telemetria carregado para análise.';
 
-    let narrative = `O projeto acadêmico Mission Control AI apresenta a análise consolidada de dados operacionais do sistema ${cycles[0]?.temperature !== undefined ? 'Orion Sentinel' : 'N/A'} em cenários operacionais simulados. `;
+    let narrative = `O projeto Mission Control AI apresenta a análise consolidada de dados operacionais do sistema ${cycles[0]?.temperature !== undefined ? 'Orion Sentinel' : 'N/A'} em cenários operacionais simulados. `;
 
     // Analyze the initial 6 cycles (the default official telemetry)
     narrative += `Os ciclos 1 a 6 documentam um cenário de monitoramento de sistemas em ambiente operacional simulado: `;
@@ -110,7 +110,6 @@ export function MissionReport({ timelineData, overview }: MissionReportProps) {
         <div className="border-b-2 border-slate-700 pb-4 mb-6">
           <div className="flex items-center justify-between text-[10px] text-slate-500 mb-2">
             <span>REGISTRO DE TELEMETRIA: SENTINEL-MC-AI</span>
-            <span className="text-blue-500 font-bold uppercase">USO ACADÊMICO</span>
           </div>
           <h2 className="text-md sm:text-lg font-black text-white uppercase text-center tracking-wider">
             RELATÓRIO TÉCNICO DE MONITORAMENTO SISTÊMICO
@@ -189,24 +188,13 @@ export function MissionReport({ timelineData, overview }: MissionReportProps) {
           <p className="text-justify text-slate-400 leading-relaxed text-[11px] font-mono">
             Este relatório consolida a integridade operacional do sistema monitorado no projeto Mission Control AI. O índice médio acumulado de risco
             operacional situa-se atualmente em <strong className="text-slate-200">{overview.averageRisk}%</strong>. As curvas de telemetria
-            permanecem registradas no histórico local de telemetria da equipe Horizon para escrutínio acadêmico e
-            análise e validação acadêmica dos resultados.
+            permanecem registradas no histórico local de telemetria da equipe Horizon para análise e validação dos resultados.
           </p>
 
           <div className="flex items-center justify-between pt-8 border-t border-slate-900 text-slate-500 text-[10px]">
             <span>Equipe Horizon (HSO)</span>
             <span>Relatório gerado automaticamente pelo sistema</span>
           </div>
-        </div>
-      </div>
-
-      <div className="bg-indigo-950/20 border border-indigo-900/30 p-4 rounded-lg flex items-start gap-3">
-        <Award className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-        <div>
-          <h4 className="text-xs font-bold text-white font-mono">Qualificação Acadêmica do Projeto</h4>
-          <p className="text-[11px] text-slate-400 leading-relaxed mt-1">
-            Este painel foi estruturado atendendo aos rigorosos termos descritos na matriz curricular da disciplina de Engenharia de Sistemas. Todos os indicadores apresentados são derivados dos algoritmos de análise de risco, monitoramento operacional e cálculos energéticos implementados no projeto Mission Control AI.
-          </p>
         </div>
       </div>
     </div>

@@ -1,13 +1,19 @@
 # Mission Control AI
-> Plataforma acadêmica de engenharia voltada ao monitoramento operacional de indicadores sistêmicos do sistema Orion Sentinel.
 
-Este projeto consolidado representa uma solução de monitoramento de integridade operacional, desenvolvida como ferramenta educacional de monitoramento e análise de sistemas. Ele serve como peça central de avaliação para disciplinas relacionadas a **Pensamento Computacional e Automação com Python** e **Soluções em Energias Renováveis e Sustentáveis (SERS)**.
+Este projeto consolidado representa uma solução de monitoramento de integridade operacional, desenvolvida como ferramenta educacional de monitoramento e análise de sistemas.
+
+---
+
+## Equipe
+
+* [Alan Souza](https://github.com/alansouza1)
+* [Gustavo Zibini Belizario](https://github.com/gustavozibini)
 
 ---
 
 ## Sobre o Projeto
 
-O **Mission Control AI** é uma plataforma acadêmica interdisciplinar desenvolvida para consolidação de parâmetros de telemetria do sistema **Orion Sentinel**. O sistema traduz os dados operacionais monitorados em interfaces dinâmicas capazes de computar riscos agregados, apresentar o balanço elétrico do Subsistema de Energia Renovável e Sustentável (SERS), e emitir relatórios integrados em conformidade com as metas curriculares acadêmicas.
+O **Mission Control AI** é uma plataforma desenvolvida para consolidação de parâmetros de telemetria do sistema **Orion Sentinel**. O sistema traduz os dados operacionais monitorados em interfaces dinâmicas capazes de computar riscos agregados, apresentar o balanço elétrico do Subsistema de Energia Renovável e Sustentável, e emitir relatórios integrados.
 
 Todas as métricas representadas no painel visual são diretamente influenciadas pelos motores analíticos de cálculo derivados do protótipo desenvolvido em Python.
 
@@ -18,7 +24,7 @@ Todas as métricas representadas no painel visual são diretamente influenciadas
 O principal objetivo deste projeto é fornecer uma ferramenta de monitoramento e telemetria operacional para avaliar:
 1. **Eficiência de Aquisição**: Processamento confiável de registros operacionais simulados e históricos.
 2. **Cálculo de Risco Sistêmico**: Algoritmos matemáticos determinísticos aplicados para ponderar riscos operacionais com base em variáveis de monitoramento cruzadas (Temperatura, Comunicação, Bateria, Oxigênio e Estabilidade).
-3. **Análise de Viabilidade Elétrica**: Análise do comportamento energético do subsistema SERS com base no nível de carga disponível, potência gerada, corrente estimada e parâmetros operacionais monitorados.
+3. **Análise de Viabilidade Elétrica**: Análise do comportamento energético do subsistema com base no nível de carga disponível, potência gerada, corrente estimada e parâmetros operacionais monitorados.
 
 ---
 
@@ -98,7 +104,7 @@ Acompanhamento contínuo de 5 métricas chaves organizadas em cartões informati
 ### 📐 Análise de Risco
 Gráficos de evolução histórica cruzando riscos pontuais e agregados ao longo de ciclos discretos. Um analisador de tendências indica cenários como *Estabilidade Operacional*, *Estabilidade Limite*, *Melhora Contínua* ou *Declínio Sistêmico*.
 
-### 🔋 Painel SERS (Subsistema de Energia Renovável e Sustentável)
+### 🔋 Painel (Subsistema de Energia Renovável e Sustentável)
 Monitoramento em tempo real da energia armazenada, potência gerada, corrente estimada e status energético do subsistema.
 
 ### 📝 Simulador de Telemetria
@@ -125,7 +131,7 @@ mission-control-ai/
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── charts/   # Gráficos temporais (Recharts)
-│   │   │   ├── energy/   # Painel fotovoltaico SERS
+│   │   │   ├── energy/   # Painel fotovoltaico
 │   │   │   ├── layout/   # Cabeçalhos, rodapés e invólucros de página
 │   │   │   └── mission/  # Simuladores, KPIs e relatórios analíticos
 │   │   ├── domain/       # Motor de cálculos energéticos e análise de risco
@@ -166,7 +172,7 @@ Para executar a interface gráfica consolidada e simular cenários operacionais 
    ```bash
    npm run dev
    ```
-4. Abra o navegador no endereço exibido pelo Vite (normalmente `http://localhost:5173`).
+4. Abra o navegador no endereço `http://localhost:3000`.
 
 ---
 
@@ -174,23 +180,18 @@ Para executar a interface gráfica consolidada e simular cenários operacionais 
 
 ### Dashboard Principal
 ![Dashboard Principal](docs/dashboard.png)
-*Painel contendo a visão macro temporal, gráficos de risco e a telemetria pontual ativa do ciclo selecionado.*
 
 ### Indicadores de Telemetria
 ![Indicadores de Telemetria](docs/indicadores.png)
-*Lista de KPIs dinâmicos detalhando os principais indicadores monitorados pelo sistema.*
 
-### Painel SERS
-![Painel SERS](docs/sers.png)
-*Painel de monitoramento energético com indicadores de potência, corrente e armazenamento.*
+### Painel
+![Painel](docs/painel.png)
 
 ### Simulador
 ![Simulador](docs/simulador.png)
-*Painel de carregamento de cenários programados e injeção de ciclos adicionais.*
 
 ### Relatório Técnico
 ![Relatório Técnico](docs/relatorio.png)
-*Visualização do laudo técnico pronto para exportação para arquivamento impresso.*
 
 ---
 
@@ -266,9 +267,9 @@ Estas regras estão implementadas no protótipo analítico original em Python e 
 
 ---
 
-## Sistema de Energia Renovável (SERS)
+## Sistema de Energia Renovável
 
-O modelo elétrico e de armazenamento do subsistema SERS baseia-se em equações simplificadas de regulação energética com base na carga acumulada:
+O modelo elétrico e de armazenamento do subsistema baseia-se em equações simplificadas de regulação energética com base na carga acumulada:
 
 ### 1. Energia Armazenada
 A quantidade de energia armazenada em watt-hora (Wh) no banco de acumuladores de reserva ativa:
@@ -297,9 +298,9 @@ Esse equacionamento foi desenvolvido para representar, de forma prática e visua
 
 ---
 
-## Parâmetros Utilizados no Modelo SERS
+## Parâmetros Utilizados no Modelo
 
-O modelo de monitoramento elétrico e de consumo do subsistema SERS baseia-se nos seguintes parâmetros estruturais:
+O modelo de monitoramento elétrico e de consumo do subsistema baseia-se nos seguintes parâmetros estruturais:
 
 | Parâmetro                   | Valor              |
 | --------------------------- | ------------------ |
@@ -317,20 +318,6 @@ Estes parâmetros são empregados pelo modelo energético acadêmico para avalia
 Ao longo das simulações acadêmicas realizadas no projeto:
 *   A análise dos indicadores permitiu identificar tendências de variação operacional ao longo dos ciclos monitorados.
 *   Os resultados demonstram a influência dos indicadores monitorados sobre o comportamento geral do sistema, fornecendo suporte à tomada de decisão e ao monitoramento operacional.
-
----
-
-## Contribuição Acadêmica
-
-O projeto de engenharia consolidado no **Mission Control AI** representa a aplicação prática rigorosa de duas competências curriculares essenciais:
-*   **Automação e Pensamento Computacional**: Soluções computacionais robustas de leitura, armazenamento, ordenamento lógico e geração de alertas informativos.
-*   **Soluções em Energias Renováveis e Sustentáveis (SERS)**: Modelagem simplificada da regulação elétrica e aproveitamento do rendimento fotovoltaico, com aplicação prática de conceitos de armazenamento dinâmico e dimensionamento elétrico.
-
----
-
-## Equipe
-
-*   **Grupo Horizon** — Engenharia de Sistemas & Automação
 
 ---
 

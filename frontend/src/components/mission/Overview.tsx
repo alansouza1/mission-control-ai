@@ -56,7 +56,7 @@ export function Overview({ overview, onReset, canReset }: OverviewProps) {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div>
           <h2 className="text-lg font-semibold tracking-tight text-white mb-1">Visão Geral da Operação</h2>
-          <p className="text-sm text-slate-400">Dados consolidados do projeto de engenharia e integridade agregada dos subsistemas analisados.</p>
+          <p className="text-sm text-slate-400">Dados consolidados do projeto e integridade agregada dos subsistemas analisados.</p>
         </div>
 
         {/* Clear/Reset telemetry helper to restore original 6 cycles state */}
