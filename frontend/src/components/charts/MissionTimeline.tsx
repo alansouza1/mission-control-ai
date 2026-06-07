@@ -97,11 +97,10 @@ export function MissionTimeline({ timelineData, selectedIndex, onSelectCycle }: 
                 <button
                   key={opt.value}
                   onClick={() => setSelectedParam(opt.value)}
-                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-mono transition-colors ${
-                    active
+                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-mono transition-colors ${active
                       ? 'bg-indigo-600 text-white'
                       : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                  }`}
+                    }`}
                   id={`btn-chart-filter-${opt.value}`}
                 >
                   <opt.icon className="w-3.5 h-3.5" style={active ? {} : { color: opt.color }} />
@@ -119,8 +118,8 @@ export function MissionTimeline({ timelineData, selectedIndex, onSelectCycle }: 
         </div>
       </div>
 
-      <div className="w-full text-slate-300 h-[300px]" id="recharts-wrapper">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="w-full text-slate-300" id="recharts-wrapper">
+        <ResponsiveContainer width="100%" height={300} minWidth={0}>
           <LineChart
             data={timelineData}
             margin={{ top: 10, right: 10, left: -20, bottom: 5 }}
