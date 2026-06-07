@@ -85,7 +85,7 @@ def generate_energy_report():
     com base nos conceitos de energia, potência e eficiência fotovoltaica.
     """
     print("\n" + "=" * 60)
-    print("PAINEL DE ENERGIA RENOVÁVEL — SERS")
+    print("PAINEL DE ENERGIA RENOVÁVEL")
     print("Sistema: Painéis Solares Fotovoltaicos + Bateria de Íon-Lítio")
     print("=" * 60)
 
