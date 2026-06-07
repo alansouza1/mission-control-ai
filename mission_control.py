@@ -13,8 +13,8 @@ TEAM_NAME = "Horizon"
 # Monitorar eficiência energética é essencial para a sustentabilidade da missão.
 # --------------------------------------------------
 
-MAX_POWER_W   = 500   # Potência máxima dos painéis solares (W)
-SYSTEM_VOLTAGE_V    = 28    # Tensão nominal do sistema elétrico do módulo (V)
+MAX_POWER_W = 500           # Potência máxima dos painéis solares (W)
+SYSTEM_VOLTAGE_V = 28       # Tensão nominal do sistema elétrico do módulo (V)
 BATTERY_CAPACITY_WH = 2000  # Capacidade total da bateria (Wh)
 
 # Ordem obrigatória: [temperatura, comunicação, bateria, oxigênio, estabilidade]
